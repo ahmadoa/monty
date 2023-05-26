@@ -15,11 +15,6 @@ void (*op_functions(char *str))(stack_t **, unsigned int)
 		{"swap", swapOP},
 		{"add", addOP},
 		{"nop", nopOP},
-		{"sub", subOP},
-		{"div", divOP},
-		{"mul", mulOP},
-		{"mod", modOP},
-		{"pchar", pcharOP},
 		{"#", nopOP},
 		{NULL, NULL}
 	};

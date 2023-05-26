@@ -32,18 +32,3 @@ void pintOP(stack_t **h, unsigned int numL)
 		pintErr(h, numL);
 	printf("%d\n", (*h)->n);
 }
-
-/**
- * pcharOP - prints chars
- * @h: pointer to head of linked list
- * @numL: line number where error happened
- * Return: void
- */
-void pcharOP(stack_t **h, unsigned int numL)
-{
-	if (!h || !*h)
-		pcharErr(h, numL);
-	if ((*h)->n > 127 || (*h)->n < 0)
-		charErr(h, numL);
-	printf("%c\n", (*h)->n);
-}

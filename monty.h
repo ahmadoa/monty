@@ -1,5 +1,5 @@
-#ifndef __MONTY_H__
-#define __MONTY_H__
+#ifndef _MONTY_H
+#define _MONTY_H
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -53,11 +53,6 @@ void popOP(stack_t **stack, unsigned int line_number);
 void swapOP(stack_t **stack, unsigned int line_number);
 void addOP(stack_t **stack, unsigned int line_number);
 void nopOP(stack_t **stack, unsigned int line_number);
-void subOP(stack_t **stack, unsigned int line_number);
-void divOP(stack_t **stack, unsigned int line_number);
-void mulOP(stack_t **stack, unsigned int line_number);
-void modOP(stack_t **stack, unsigned int line_number);
-void pcharOP(stack_t **stack, unsigned int line_number);
 
 /* error handlers */
 void fileErr(void);
@@ -69,13 +64,6 @@ void pushErr(stack_t **stack, unsigned int numL);
 void pintErr(stack_t **stack, unsigned int numL);
 void swapErr(stack_t **stack, unsigned int numL);
 void popErr(stack_t **stack, unsigned int numL);
-void subErr(stack_t **stack, unsigned int numL);
-void divErr(stack_t **stack, unsigned int numL);
-void zeroErr(stack_t **stack, unsigned int numL);
-void mulErr(stack_t **stack, unsigned int numL);
-void modErr(stack_t **stack, unsigned int numL);
-void charErr(stack_t **stack, unsigned int numL);
-void pcharErr(stack_t **stack, unsigned int numL);
 
 
 /* shared vars */
