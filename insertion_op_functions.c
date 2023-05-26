@@ -28,7 +28,8 @@ void addOP(stack_t **h, unsigned int numL)
  */
 void pushOP(stack_t **h, unsigned int numL)
 {
-	stack_t *node = NULL, *tail = NULL, size_t i = 0;
+	stack_t *node = NULL, *tail = NULL;
+	size_t i = 0;
 
 	if (!h || !numL)
 		exit(EXIT_FAILURE);
