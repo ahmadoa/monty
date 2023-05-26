@@ -1,5 +1,10 @@
 #include "monty.h"
 
+/**
+ * op_functions - function that search which function to use for opcode
+ * @str: the opcode
+ * Return: pointer to function
+ */
 void (*op_functions(char *str))(stack_t **, unsigned int)
 {
 	instruction_t instructions[] = {
@@ -10,6 +15,11 @@ void (*op_functions(char *str))(stack_t **, unsigned int)
 		{"swap", swapOP},
 		{"add", addOP},
 		{"nop", nopOP},
+		{"sub", subOP},
+		{"div", divOP},
+		{"mul", mulOP},
+		{"mod", modOP},
+		{"pchar", pcharOP},
 		{"#", nopOP},
 		{NULL, NULL}
 	};

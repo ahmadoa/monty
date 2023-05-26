@@ -1,5 +1,11 @@
 #include "monty.h"
 
+/**
+ * addOP - adds two top elements from stack
+ * @h: pointer to head of linked list
+ * @numL: number of line being interpreted
+ * Return: void
+ */
 void addOP(stack_t **h, unsigned int numL)
 {
 	int uno, dos;
@@ -14,11 +20,15 @@ void addOP(stack_t **h, unsigned int numL)
 	(*h)->n = uno + dos;
 }
 
-
+/**
+ * pushOP - pushs new element to stack
+ * @h: pointer to head of stack
+ * @numL: line number
+ * Return: void
+ */
 void pushOP(stack_t **h, unsigned int numL)
 {
-	stack_t *node = NULL, *tail = NULL;
-	size_t i = 0;
+	stack_t *node = NULL, *tail = NULL, size_t i = 0;
 
 	if (!h || !numL)
 		exit(EXIT_FAILURE);
@@ -26,11 +36,7 @@ void pushOP(stack_t **h, unsigned int numL)
 		pushErr(h, numL);
 	node = malloc(sizeof(stack_t));
 	if (!node)
-	{
-		fprintf(stderr, "Error: malloc failed \n");
-		freeStack(*h);
-		exit(EXIT_FAILURE);
-	}
+		mallocErr(h);
 	while (valStack.n[i] != '\0')
 	{
 		if (isdigit(valStack.n[i]) == 0 && valStack.n[i] != '-')
@@ -38,7 +44,6 @@ void pushOP(stack_t **h, unsigned int numL)
 		i++;
 	}
 	node->n = atoi(valStack.n);
-
 	if (valStack.mode == 1)
 	{
 		node->next = NULL;

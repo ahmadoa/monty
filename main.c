@@ -1,9 +1,15 @@
 #include "monty.h"
 
+/**
+ * main - interpreter for monty files
+ * @argc: number of args passed
+ * @argv: an array of the args passed
+ * Return: always 0
+ */
 int main(int argc, char **argv)
 {
 	FILE *file_op;
-	char *bufL = NULL, op_buf[20], bufVAL[20];
+	char *bufL, op_buf[20], bufVAL[20];
 	ssize_t readBs = 0, tokens = 0;
 	size_t bufLen = 0;
 	unsigned int numL = 0;
